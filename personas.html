@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buscador de nombre</title>
+  <link rel="stylesheet" href="cartas.css">
+</head>
+<body>
+
+  <h1>Registro de nombres:</h1>
+  <br>
+
+  <form id="registro">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre"><br><br>
+
+    <label for="apellido">Apellido:</label><br>
+    <input type="text" id="apellido"><br><br>
+
+    <label for="edad">Edad:</label><br>
+    <input type="number" id="edad" min="18" max="40"><br><br>
+
+    <label for="foto_perfil">Selecciona tu foto:</label><br>
+    <input type="file" id="foto_perfil" accept="image/*"><br><br>
+  </form>
+  <br>
+
+  <button type="button" onclick="agregar()">Agregar</button>
+  <br><br>
+
+  <button type="button" onclick="ordenar()">Ordenar alfabéticamente</button>
+  <br><br>
+
+  <h2>Buscador de registrados:</h2>
+  <br>
+
+  <form id="buscador">
+    <label for="ingresar">Ingresa un nombre:</label><br>
+    <input type="text" id="ingresar">
+  </form>
+  <br>
+
+  <button type="button" onclick="buscar()">Buscar</button>
+  <br><br>
+
+  <button type="button" onclick="limpiar()">Limpiar</button>
+  <br><br>
+
+  <div id="cards-container"></div>
+
+  <script src="personas.js"></script>
+</body>
+</html>
